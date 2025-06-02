@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículum Vitae</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  </audio>
+  <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/559/519/e31.jpg" alt="Imagen en esquina" class="imagen-esquina"/>
+  <main id="cv">
+    <h1 id="nombre"></h1>
+    <p id="email"></p>
+    <section>
+      <h2>Resumen profesional</h2>
+      <p id="resumen"></p>
+    </section>
+    <section>
+      <h2>Experiencia</h2>
+      <ul id="experiencia"></ul>
+    </section>
+    <section>
+      <h2>Educación</h2>
+      <ul id="educacion"></ul>
+    </section>
+      <h2>Mi arte</h2>
+      <ul id="Mi arte"></ul>
+      <img src="1000089084.jpg" alt="imagen 1" class="imagen-1"/>
+      <img src="1000089085.jpg" alt="imagen 2" class="imagen-2"/>
+      <img src="1000089040.jpg" alt="imagen 3" class="imagen-3"/>
+  </main>
+  <h1>Reproductor de Música</h1>
+<audio id="audioPlayer" controls></audio>
+  <ul id="playlist">
+    <li data-src="LOS DIOZES SON.mp3">LOS DIOZES SON</li>
+    <li data-src="LOS DIOZES - DIABLA  (Prod. Sceno).mp4">DIABLA</li>
+    <li data-src="2PA2.mp3">2PA2</li>
+  </ul>
+<script>
+    const player = document.getElementById('audioPlayer');
+    const playlistItems = document.querySelectorAll('#playlist li');
+
+    playlistItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.getAttribute('data-src');
+        player.src = src;
+        player.play();
+      });
+    });
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
